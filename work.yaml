@@ -1,10 +1,11 @@
-parsers:
-  - url: https://example.com/profile.yaml
+parsers: # array
+  - url: [此处输入你的节点订阅链接]
     yaml:
-      prepend-rules:
-        - DOMAIN,test.com,DIRECT # rules最前面增加一个规则
-      append-proxies:
-        - name: test # proxies最后面增加一个服务
-          type: http
-          server: 123.123.123.123
-          port: 456
+      prepend-proxy-groups:  # 在proxy-groups最前面增加代理分组
+        - name: hngtrust
+          type: select
+          proxies:
+            - 🔰 选择节点
+            - DIRECT
+      prepend-rules:  # 在rules最前面增加规则
+        - DOMAIN-SUFFIX,hngtrust.com,ChatGPT
