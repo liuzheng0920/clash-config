@@ -1,5 +1,5 @@
 parsers: # array
-  - url: [此处输入你的节点订阅链接]
+  - url: https://raw.githubusercontent.com/liuzheng0920/clash-config/main/work.yaml
     yaml:
       prepend-proxy-groups:  # 在proxy-groups最前面增加代理分组
         - name: hngtrust
