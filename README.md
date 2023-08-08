@@ -1,1 +1,1 @@
-# clash-config
+# Clash config 配置
