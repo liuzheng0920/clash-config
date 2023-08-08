@@ -1,12 +1,14 @@
-yaml:
-  prepend-proxy-groups:  # 在proxy-groups最前面增加代理分组
-    - name: work
-      type: select
-      proxies:
-        - DIRECT
-    - name: proxy
-      type: select
-      proxies:
-        - 🔰 选择节点   
-  prepend-rules:  # 在rules最前面增加规则
-  - DOMAIN-SUFFIX,hngtrust.com,work
+parsers: # array
+  - reg: https://.+$
+    yaml:
+      prepend-proxy-groups:  # 在proxy-groups最前面增加代理分组
+        - name: work
+          type: select
+          proxies:
+            - DIRECT
+        - name: proxy
+          type: select
+          proxies:
+            - 🔰 选择节点   
+      prepend-rules:  # 在rules最前面增加规则
+      - DOMAIN-SUFFIX,hngtrust.com,work
