@@ -9,4 +9,4 @@ yaml:
       proxies:
         - 🔰 选择节点   
   prepend-rules:  # 在rules最前面增加规则
-    - DOMAIN-SUFFIX,hngtrust.com,work
+  - DOMAIN-SUFFIX,hngtrust.com,work
