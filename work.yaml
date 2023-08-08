@@ -1,6 +1,4 @@
-parsers: # array
-  - reg: https://.+$
-    yaml:
+yaml:
       prepend-proxy-groups:  # 在proxy-groups最前面增加代理分组
         - name: work
           type: select
